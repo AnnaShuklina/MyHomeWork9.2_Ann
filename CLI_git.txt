@@ -1,0 +1,162 @@
+Last login: Sat Mar 25 17:17:28 on ttys000
+annashuklina@MBP-Anna Тинькофф QA Mobile % mkdir MyGitHW     
+annashuklina@MBP-Anna Тинькофф QA Mobile % cd MyGitHW
+annashuklina@MBP-Anna MyGitHW % git init
+Initialized empty Git repository in /Users/annashuklina/Documents/QA/Тинькофф QA Mobile/MyGitHW/.git/
+annashuklina@MBP-Anna MyGitHW % touch ShuText.txt
+annashuklina@MBP-Anna MyGitHW % nano ShuText.txt
+annashuklina@MBP-Anna MyGitHW % git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	ShuText.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+annashuklina@MBP-Anna MyGitHW % git add .
+annashuklina@MBP-Anna MyGitHW % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   ShuText.txt
+
+annashuklina@MBP-Anna MyGitHW % git commit -m "My first commit with ShuText.txt"
+[main (root-commit) f9607a0] My first commit with ShuText.txt
+ 1 file changed, 5 insertions(+)
+ create mode 100644 ShuText.txt
+annashuklina@MBP-Anna MyGitHW % git status
+On branch main
+nothing to commit, working tree clean
+annashuklina@MBP-Anna MyGitHW % git remote -v
+annashuklina@MBP-Anna MyGitHW % git remote add origin git@github.com:AnnaShuklina/MyHomeWork9.2_Ann.git
+annashuklina@MBP-Anna MyGitHW % git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+annashuklina@MBP-Anna MyGitHW % git push --set-upstream origin main
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+annashuklina@MBP-Anna MyGitHW % git config -l
+credential.helper=osxkeychain
+init.defaultbranch=main
+user.email=islamovaaf@gmail.com
+user.name=ShAnna
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=git@github.com:AnnaShuklina/MyHomeWork9.2_Ann.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+annashuklina@MBP-Anna MyGitHW % git remote -v
+origin	git@github.com:AnnaShuklina/MyHomeWork9.2_Ann.git (fetch)
+origin	git@github.com:AnnaShuklina/MyHomeWork9.2_Ann.git (push)
+annashuklina@MBP-Anna MyGitHW % git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+annashuklina@MBP-Anna MyGitHW % git push --set-upstream origin main
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+annashuklina@MBP-Anna MyGitHW % git config remote.origin.url https://github.com/AnnaShuklina/MyHomeWork9.2_Ann.git
+annashuklina@MBP-Anna MyGitHW % git push -u -f origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/AnnaShuklina/MyHomeWork9.2_Ann.git'
+annashuklina@MBP-Anna MyGitHW % git push -u -f origin main  
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AnnaShuklina/MyHomeWork9.2_Ann.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+annashuklina@MBP-Anna MyGitHW % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+annashuklina@MBP-Anna MyGitHW % git branch
+* main
+annashuklina@MBP-Anna MyGitHW % git branch newbranch
+annashuklina@MBP-Anna MyGitHW % git branch          
+* main
+  newbranch
+annashuklina@MBP-Anna MyGitHW % git checkout newbranch
+Switched to branch 'newbranch'
+annashuklina@MBP-Anna MyGitHW % git status
+On branch newbranch
+nothing to commit, working tree clean
+annashuklina@MBP-Anna MyGitHW % touch ShuText2.txt
+annashuklina@MBP-Anna MyGitHW % nano ShuText2.txt
+annashuklina@MBP-Anna MyGitHW % git status
+On branch newbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	ShuText2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+annashuklina@MBP-Anna MyGitHW % git add .
+annashuklina@MBP-Anna MyGitHW % git status
+On branch newbranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   ShuText2.txt
+
+annashuklina@MBP-Anna MyGitHW % git commit -m "commit with ShuText2.txt"
+[newbranch 2b4a490] commit with ShuText2.txt
+ 1 file changed, 3 insertions(+)
+ create mode 100644 ShuText2.txt
+annashuklina@MBP-Anna MyGitHW % git push
+fatal: The current branch newbranch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin newbranch
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+annashuklina@MBP-Anna MyGitHW % git push --set-upstream origin newbranch
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 344 bytes | 344.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'newbranch' on GitHub by visiting:
+remote:      https://github.com/AnnaShuklina/MyHomeWork9.2_Ann/pull/new/newbranch
+remote: 
+To https://github.com/AnnaShuklina/MyHomeWork9.2_Ann.git
+ * [new branch]      newbranch -> newbranch
+branch 'newbranch' set up to track 'origin/newbranch'.
+annashuklina@MBP-Anna MyGitHW % git push -u -f origin newbranch         
+branch 'newbranch' set up to track 'origin/newbranch'.
+Everything up-to-date
+annashuklina@MBP-Anna MyGitHW % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+annashuklina@MBP-Anna MyGitHW % 
